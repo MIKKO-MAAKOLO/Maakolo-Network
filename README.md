@@ -23,7 +23,13 @@ Maakolo is a cross-platform client-server architecture demonstrating the impleme
 This project represents approximately **8 months** of iterative research, protocol testing, and infrastructure hardening. Development focused on practical implementation of traffic obfuscation techniques and resilient backend architecture under real-world network conditions.
 
 ### 📱 Client Application
-The Flutter-based mobile client source code is currently being prepared for public release and will be added to this repository in a forthcoming update. Pre-built binaries are distributed through official channels only.
+
+The primary client is a **Flutter-based native application** engineered specifically for the Android ecosystem. It leverages platform-specific APIs for TUN-mode routing, persistent background execution, and OS-level network stack integration — features that are restricted or unavailable on iOS without enterprise provisioning.
+
+**iOS & App-less Access:**  
+For iOS users and those who prefer not to install native applications, the project includes a **full-featured Telegram bot** that serves as a lightweight, zero-install alternative. The bot provides complete account management, subscription provisioning, and secure key distribution through end-to-end encrypted Telegram channels. Initially developed as an interim solution during the early research phase, it has evolved into a permanent architectural component demonstrating server-side tunnel orchestration without client-side binaries.
+
+The Flutter client source code is currently being prepared for public release and will be added to this repository in a forthcoming update. Pre-built binaries are distributed through official channels only.
 
 ### 🛠 Technical Stack
 * **Client Frontend:** Flutter (Dart) 
