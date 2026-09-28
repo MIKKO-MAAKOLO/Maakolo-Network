@@ -10,12 +10,13 @@ Team pet project (8 people, ~8 months), currently **on hold**.
 - **Protocols:** VLESS (Reality), Hysteria 2 (QUIC)
 - **Payments:** Platega (card/SBP), Plisio (crypto), Telegram Stars — HMAC-verified webhooks, idempotent grants, underpayment fraud checks
 
-## Security Features (My Focus)
-- **Authentication:** salted password hashing, optional 2FA, timed session tokens
-- **API Protection:** rate limiting, request validation, anti-abuse measures
-- **Payments:** secure webhook verification, idempotent processing, fraud detection
-- **Infrastructure:** VPS hardening (SSH key-only, firewall, fail2ban)
-- **Logging:** secret masking before disk write
+## My Responsibility
+- Permanently responsible for infrastructure throughout the whole project (~8 months, team of 8)
+- Deployed and maintained the VPN server (VPS); planned a two-server architecture: backend/auth separate from VPN tunnels
+- Built the REST API on Flask, worked with PostgreSQL, integrated payment webhooks for subscriptions
+- Implemented authentication with secure password hashing together with a partner
+- Hardened the server: disabled root SSH login, key-based auth only, non-default SSH port, fail2ban, firewall with a minimal set of open ports
+- Diagnosed and fixed production outages: troubleshooting and infrastructure recovery after incidents
 
 ## System Components
 1. **Flask API:** accounts, subscriptions, payments, proxy management
@@ -43,12 +44,13 @@ On hold. Code preserved as-is for reference.
 - **Протоколы:** VLESS (Reality), Hysteria 2 (QUIC)
 - **Платежи:** Platega (карта/СБП), Plisio (крипта), Telegram Stars — вебхуки с HMAC-проверкой, идемпотентная активация, проверка недоплаты
 
-## Безопасность (моя зона ответственности)
-- **Аутентификация:** хэширование паролей с солью, опциональная 2FA, сессионные токены с временем жизни
-- **Защита API:** rate limiting, валидация запросов, защита от злоупотреблений
-- **Платежи:** безопасная проверка вебхуков, идемпотентная обработка, обнаружение мошенничества
-- **Инфраструктура:** hardening сервера (SSH только по ключам, firewall, fail2ban)
-- **Логирование:** маскирование секретов перед записью на диск
+## Моя зона ответственности
+- Постоянный ответственный за инфраструктуру на всём протяжении проекта (~8 месяцев, команда из 8 человек)
+- Развернул и поддерживал VPN-сервер (VPS); в архитектуре планировалось разделение на 2 сервера: отдельно backend/авторизация, отдельно VPN-туннели
+- Настраивал REST API на Flask, работал с PostgreSQL, интегрировал вебхуки для подписок
+- Совместно с напарником реализовал систему аутентификации с безопасным хэшированием паролей
+- Провёл hardening сервера: отключил root-доступ по SSH, настроил вход по SSH-ключам, сменил стандартный порт SSH, установил fail2ban, настроил firewall под минимально необходимый набор портов
+- Диагностировал и устранял сбои в проде: troubleshooting и восстановление инфраструктуры после инцидентов
 
 ## Компоненты системы
 1. **Flask API:** аккаунты, подписки, платежи, управление прокси
