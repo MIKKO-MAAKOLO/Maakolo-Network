@@ -8,19 +8,18 @@ Team pet project (8 people, ~8 months), currently **on hold**.
 - **Bot:** Python 3, aiogram 3 (async), aiosqlite
 - **Core:** Xray-core / Sing-box
 - **Protocols:** VLESS (Reality), Hysteria 2 (QUIC)
-- **Payments:** Platega (card/SBP), Plisio (crypto), Telegram Stars — HMAC-verified webhooks, idempotent grants, underpayment fraud checks
 
 ## My Responsibility
 - Permanently responsible for infrastructure throughout the whole project (~8 months, team of 8)
 - Deployed and maintained the VPN server (VPS); planned a two-server architecture: backend/auth separate from VPN tunnels
-- Built the REST API on Flask, worked with PostgreSQL, integrated payment webhooks for subscriptions
+- Built the REST API on Flask, worked with PostgreSQL, integrated webhooks for subscriptions
 - Implemented authentication with secure password hashing together with a partner
 - Hardened the server: disabled root SSH login, key-based auth only, non-default SSH port, fail2ban, firewall with a minimal set of open ports
 - Diagnosed and fixed production outages: troubleshooting and infrastructure recovery after incidents
 
 ## System Components
-1. **Flask API:** accounts, subscriptions, payments, proxy management
-2. **PostgreSQL:** user data, subscriptions, payment registry
+1. **Flask API:** accounts, subscriptions, proxy management
+2. **PostgreSQL:** user data, subscriptions
 3. **Android APK:** native client for Android users (ID + password sign-in, built-in protocol client)
 4. **Telegram Bot:** client for iOS/PC and fallback (EN/RU/FI), setup guides, support tickets, APK delivery
 5. **Expiration Watchdog:** automatic cleanup of expired subscriptions
@@ -42,7 +41,6 @@ On hold. Code preserved as-is for reference.
 - **Бот:** Python 3, aiogram 3 (асинхронный), aiosqlite
 - **Ядро:** Xray-core / Sing-box
 - **Протоколы:** VLESS (Reality), Hysteria 2 (QUIC)
-- **Платежи:** Platega (карта/СБП), Plisio (крипта), Telegram Stars — вебхуки с HMAC-проверкой, идемпотентная активация, проверка недоплаты
 
 ## Моя зона ответственности
 - Постоянный ответственный за инфраструктуру на всём протяжении проекта (~8 месяцев, команда из 8 человек)
@@ -53,8 +51,8 @@ On hold. Code preserved as-is for reference.
 - Диагностировал и устранял сбои в проде: troubleshooting и восстановление инфраструктуры после инцидентов
 
 ## Компоненты системы
-1. **Flask API:** аккаунты, подписки, платежи, управление прокси
-2. **PostgreSQL:** данные пользователей, подписки, реестр платежей
+1. **Flask API:** аккаунты, подписки, управление прокси
+2. **PostgreSQL:** данные пользователей, подписки
 3. **Android APK:** нативный клиент для Android (вход по ID + паролю, встроенный клиент протокола)
 4. **Telegram-бот:** клиент для iOS/PC и fallback (EN/RU/FI), гайды, тикеты в поддержку, выдача APK
 5. **Watchdog просрочек:** автоматическая очистка просроченных подписок
