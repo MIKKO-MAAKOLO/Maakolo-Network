@@ -1,7 +1,7 @@
 # 🌐 Maakolo Network
 
 Secure VPN infrastructure with dynamic user routing.
-Team pet project (8 people, ~8 months), currently **on hold**.
+Team pet project (8 people, ~9 months), currently **on hold**.
 
 ## Tech Stack
 - **Backend:** Python 3, Flask, PostgreSQL, Redis
